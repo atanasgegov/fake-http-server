@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class HomeController {
 
-	@RequestMapping("/imitateWorkForMs")
+	@RequestMapping("/imitateWork")
 	public ResponseEntity<String> processWorkForMs(@RequestParam(name = "timeInMs", required = false, defaultValue = "100") long timeInMs) {
 		try {
 			Thread.sleep(timeInMs);
