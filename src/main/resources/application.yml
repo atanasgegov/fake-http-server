@@ -1,0 +1,8 @@
+server:
+  port : 9090
+  
+# the logging configuration is here
+logging:
+  level:
+    root: INFO
+    com.akg: DEBUG
