@@ -6,3 +6,7 @@ logging:
   level:
     root: INFO
     com.akg: DEBUG
+
+common:
+  number-of-executions: 1000
+  notificator-url: http://localhost:8090/shutdown
