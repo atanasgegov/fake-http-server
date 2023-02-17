@@ -9,7 +9,7 @@ public class Worker {
 	@Autowired
 	private Notificator notificator;
 	
-	public boolean sleep(long timeInMs) throws InterruptedException {
+	public boolean sleepForAndCountdown(long timeInMs) throws InterruptedException {
 		Thread.sleep(timeInMs);
 		
 		notificator.countdownAndNotifyIfReady();

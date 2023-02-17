@@ -16,12 +16,12 @@ import lombok.extern.slf4j.Slf4j;
 public class HomeController {
 
 	@Autowired
-	private Worker sleepService;
+	private Worker workerService;
 	
 	@RequestMapping("/imitateWork")
 	public ResponseEntity<String> processWorkForMs(@RequestParam(name = "timeInMs", required = false, defaultValue = "100") long timeInMs) {
 		try {
-			sleepService.sleep(timeInMs);
+			workerService.sleepForAndCountdown(timeInMs);
 		} catch (InterruptedException e) {
 			
 			log.error("Something wrong happened!", e);

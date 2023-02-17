@@ -40,8 +40,8 @@ public class Notificator {
 
 			if( whenToNotifyCounter == 0 ) {
 				restTemplate.getForObject(config.getNotificatorUrl(), String.class);
-				log.info("The notification triggered. Countdown is restarted.");
-				
+				log.info("The notification has triggered. Countdown is reset.");
+				// reset the counter
 				whenToNotifyCounter = config.getNumberOfExecutions();
 				return true;
 			}
