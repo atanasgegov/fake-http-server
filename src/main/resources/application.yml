@@ -8,5 +8,5 @@ logging:
     com.akg: DEBUG
 
 common:
-  number-of-executions: 1000
+  number-of-executions: 50000
   notificator-url: http://localhost:8090/shutdown
